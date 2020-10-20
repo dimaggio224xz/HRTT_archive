@@ -1,0 +1,65 @@
+Turbo Assembler	 Version 4.0	    07/02/17 22:24:27	    Page 1
+akr.asm
+
+
+
+      1					 .586
+      2	00000000			 .model	small
+      3	00000000			 .stack	100h
+      4	00000000			 .data
+      5		  =0063			 disp equ 99
+      6		  =-0024		 data equ -36
+      7	00000000  FFD3			 wer dw	-45
+      8	00000002  00007530		 qwe dd	30000
+      9	00000006			 .code
+     10	00000000  66| B8 0000s		 stt:mov ax,@data
+     11	00000004  8E D8			     mov ds,ax
+     12	00000006  BB 00000000r		   lea ebx, wer
+     13	0000000B  66| 8B 15 00000000r	 mov dx, wer
+     14	00000012  66| 01 13		 add word ptr [ebx],dx
+     15					     ;and dword	ptr [bx]+disp, data
+     16					    ; test word	ptr [ebx]+disp,	data
+     17					    ; lock or  ss:word ptr [bx]+disp, data
+     18					     ;add dword	ptr [eax]+[edi*4]+disp,	data
+     19					     ;add word ptr [eax]+[edi*4]+disp, data
+     20					     ;add es:word ptr [eax]+[edi*4]+disp, data
+     21	00000015  66| B8 4C00		     mov ax,4c00h
+     22	00000019  CD 21			     int 21h
+     23					 end stt
+Turbo Assembler	 Version 4.0	    07/02/17 22:24:27	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "07/02/17"
+??FILENAME			  Text	 "akr	  "
+??TIME				  Text	 "22:24:27"
+??VERSION			  Number 0400
+@32BIT				  Text	 1
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0000H
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 AKR
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 2
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 4
+DATA				  Number -0024
+DISP				  Number 0063
+QWE				  Dword	 DGROUP:0002
+STT				  Near	 _TEXT:0000
+WER				  Word	 DGROUP:0000
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  STACK				  32  0100 Para	  Stack	  STACK
+  _DATA				  32  0006 Dword  Public  DATA
+_TEXT				  32  001B Dword  Public  CODE
+

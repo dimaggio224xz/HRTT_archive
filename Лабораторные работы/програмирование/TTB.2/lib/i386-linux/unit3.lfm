@@ -1,0 +1,54 @@
+object Form3: TForm3
+  Left = 225
+  Height = 333
+  Top = 353
+  Width = 395
+  Caption = 'Задание 2'
+  ClientHeight = 333
+  ClientWidth = 395
+  Color = clYellow
+  LCLVersion = '1.6.0.4'
+  object StringGrid1: TStringGrid
+    Left = 8
+    Height = 128
+    Top = 32
+    Width = 328
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goTabs, goAlwaysShowEditor, goSmoothScroll]
+    TabOrder = 0
+  end
+  object StringGrid2: TStringGrid
+    Left = 8
+    Height = 136
+    Top = 184
+    Width = 328
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 424
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'создать'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 480
+    Height = 25
+    Top = 288
+    Width = 75
+    Caption = 'выход'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 440
+    Height = 17
+    Top = 16
+    Width = 45
+    Caption = 'Label1'
+    ParentColor = False
+  end
+end

@@ -1,0 +1,31 @@
+Uses Crt;
+ label ext,stp,nxt;
+var  y,r,q,n:Byte;
+          x:Word;
+Begin  ClrScr; n:=1;
+writeln('  DIVIDE UNSIGNED DATA');Writeln;
+writeln('  Range  Dividend:0 .. 65535');
+writeln('  Range  Divisor: 0 .. 255');writeln;
+Repeat    writeln('  Variant:',n);
+write(' Dividend: X='); readln(x); write('  Divisor: Y='); readln(y);
+     asm
+          cmp y,0
+           jz ext
+           mov ax,x
+           cmp ah,y
+           jnc ext
+           cmp x,0
+           jnz @ptl
+           jmp @trn
+@ptl:div y
+@trn:mov q,al
+           mov r,ah
+     end;
+writeln(' Quotient: Q=',q); writeln('Remainder: R=',r);
+writeln('  Testing: Q*Y+R=',Q*Y+R);   Writeln;  goto stp;
+ext: writeln('Error divide on zero');  Writeln;
+stp: inc(n);
+Until n=5;  Writeln;
+writeln('  STOP TESTING DIVIDE ');readln
+end.
+

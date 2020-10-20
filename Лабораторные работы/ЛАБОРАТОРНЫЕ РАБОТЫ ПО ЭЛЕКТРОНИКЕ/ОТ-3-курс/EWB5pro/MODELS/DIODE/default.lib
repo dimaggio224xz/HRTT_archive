@@ -1,0 +1,36 @@
+
+.MODEL ideal D (
++   IS =  1e-14
++   RS =  1
++   CJO =  0
++   VJ =  1
++   TT =  0
++   M =  0.5
++   BV =  1e+30
++   N =  1
++   EG =  1.11
++   XTI =  3
++   KF =  0
++   AF =  1
++   FC =  0.5
++   IBV =  0.001
++   TNOM =  27
+)
+
+.MODEL 1N4001 D (
++   IS =  1.42e-09
++   RS =  0.042
++   CJO =  4.24e-11
++   VJ =  0.75
++   TT =  7.2e-06
++   M =  0.333
++   BV =  0
++   N =  0
++   EG =  1.11
++   XTI =  3
++   KF =  0
++   AF =  1
++   FC =  0.5
++   IBV =  0.001
++   TNOM =  27
+)

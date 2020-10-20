@@ -1,0 +1,56 @@
+object Form2: TForm2
+  Left = 467
+  Height = 291
+  Top = 296
+  Width = 320
+  Caption = 'Задание 1'
+  ClientHeight = 291
+  ClientWidth = 320
+  Color = 4310615
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 8
+    Height = 17
+    Top = 80
+    Width = 126
+    Caption = 'Исходный массив'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 160
+    Height = 17
+    Top = 80
+    Width = 176
+    Caption = 'РЕзультирующий массив'
+    ParentColor = False
+  end
+  object Memo1: TMemo
+    Left = 24
+    Height = 88
+    Top = 104
+    Width = 106
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 0
+  end
+  object Memo2: TMemo
+    Left = 160
+    Height = 90
+    Top = 102
+    Width = 150
+    Lines.Strings = (
+      'Memo2'
+    )
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 240
+    Height = 25
+    Top = 242
+    Width = 75
+    Caption = 'закрыть'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+end

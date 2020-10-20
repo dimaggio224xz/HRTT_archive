@@ -1,0 +1,221 @@
+object Form1: TForm1
+  Left = 297
+  Height = 287
+  Top = 149
+  Width = 439
+  Caption = 'Решение квадратного уравнения'
+  ClientHeight = 264
+  ClientWidth = 439
+  Color = clSkyBlue
+  Font.Height = -13
+  Font.Name = 'Sans'
+  Menu = MainMenu1
+  PopupMenu = PopupMenu1
+  LCLVersion = '1.6.0.4'
+  object Edit1: TEdit
+    Left = 32
+    Height = 25
+    Top = 104
+    Width = 81
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 128
+    Height = 25
+    Top = 104
+    Width = 81
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 240
+    Height = 25
+    Top = 104
+    Width = 81
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 1
+    Top = 136
+    Width = 1
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 18
+    Top = 24
+    Width = 306
+    Caption = 'Уравнение задается коэффициентами'
+    Font.Height = -15
+    Font.Name = 'Sans'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 41
+    Top = 48
+    Width = 81
+    AutoSize = False
+    Caption = '2 степень а'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 136
+    Height = 41
+    Top = 48
+    Width = 81
+    AutoSize = False
+    Caption = '1 степень b'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 248
+    Height = 41
+    Top = 48
+    Width = 81
+    AutoSize = False
+    Caption = '0 степень с'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Hint = 'вычисляет корни'
+    Top = 208
+    Width = 81
+    Caption = 'Вычислить'
+    OnClick = Button1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 130
+    Height = 25
+    Hint = 'обнуляет значения'
+    Top = 208
+    Width = 81
+    Caption = 'Новая'
+    OnClick = Button2Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 220
+    Height = 25
+    Hint = 'завершает работу'
+    Top = 208
+    Width = 81
+    Caption = 'Завершить'
+    OnClick = Button3Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 24
+    Top = 0
+    Width = 439
+    Caption = 'ToolBar1'
+    TabOrder = 6
+    object SpeedButton1: TSpeedButton
+      Left = 1
+      Height = 22
+      Hint = 'записывает данные'
+      Top = 2
+      Width = 23
+      OnClick = MenuItem5Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 24
+      Height = 22
+      Hint = 'Вычисляет дискрименат'
+      Top = 2
+      Width = 23
+      OnClick = MenuItem1Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SpeedButton3: TSpeedButton
+      Left = 47
+      Height = 22
+      Hint = 'вычисляет корни'
+      Top = 2
+      Width = 29
+      OnClick = MenuItem3Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SpeedButton4: TSpeedButton
+      Left = 76
+      Height = 22
+      Hint = 'выход'
+      Top = 2
+      Width = 28
+      OnClick = MenuItem4Click
+      ShowHint = True
+      ParentShowHint = False
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 343
+    top = 156
+    object MenuItem5: TMenuItem
+      Caption = 'ввод данных'
+      OnClick = MenuItem5Click
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Дискременант'
+      OnClick = MenuItem1Click
+      object MenuItem2: TMenuItem
+        Caption = 'анализ'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'вычисление'
+        OnClick = MenuItem6Click
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'результат'
+      OnClick = Button1Click
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'выход'
+      OnClick = MenuItem4Click
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    left = 240
+    top = 156
+    object MenuItem7: TMenuItem
+      Caption = 'ввод данных'
+      OnClick = MenuItem5Click
+    end
+    object MenuItem8: TMenuItem
+      Caption = 'дискрименат'
+      OnClick = MenuItem8Click
+      object MenuItem11: TMenuItem
+        Caption = 'анализ'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem12: TMenuItem
+        Caption = 'вычисление'
+        OnClick = MenuItem6Click
+      end
+    end
+    object MenuItem10: TMenuItem
+      Caption = 'результат'
+      OnClick = MenuItem3Click
+    end
+    object MenuItem9: TMenuItem
+      Caption = 'выход'
+      OnClick = MenuItem4Click
+    end
+  end
+end
